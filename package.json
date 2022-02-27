@@ -11,10 +11,47 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
+    "express-rest-response": "^1.2.0",
     "mysql2": "^2.3.3",
     "sequelize": "^6.17.0"
   },
   "devDependencies": {
+    "@types/express": "^4.17.13",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
     "nodemon": "^2.0.15"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "rules": {
+      "brace-style": [
+        "error",
+        "stroustrup"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-unused-vars": [
+        "warn"
+      ],
+      "no-var": [
+        "off"
+      ],
+      "one-var": [
+        "off"
+      ],
+      "linebreak-style": 0,
+      "consistent-return": 0
+    }
   }
 }

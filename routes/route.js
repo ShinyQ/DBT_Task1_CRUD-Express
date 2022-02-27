@@ -1,21 +1,22 @@
-const classes_ctrl = require("./../controllers/classes_ctrl");
-const students_ctrl = require("./../controllers/students_ctrl");
-module.exports = function(express) {
- const route = express.Router();
-//classes route
- route.get("/classes",classes_ctrl.getAll);
- route.get("/classes/:id",classes_ctrl.get);
- route.get("/classes_search",classes_ctrl.search);
- route.post("/classes",classes_ctrl.save);
- route.put("/classes/:id",classes_ctrl.update);
- route.delete("/classes/:id",classes_ctrl.delete);
- route.get("/classes_with_students",classes_ctrl.getWithItems);
-//students route
- route.get("/students",students_ctrl.getAll);
- route.get("/students/:id",students_ctrl.get);
- route.get("/students_search",students_ctrl.search);
- route.post("/students",students_ctrl.save);
- route.put("/students/:id",students_ctrl.update);
- route.delete("/students/:id",students_ctrl.delete);
- return route;
+const classes = require('../controllers/classController');
+const students = require('../controllers/studentController');
+
+module.exports = (express) => {
+  const route = express.Router();
+
+  // classes route
+  route.get('/class', classes.getAll);
+  route.get('/class/:id', classes.getByID);
+  route.post('/class', classes.save);
+  route.put('/class/:id', classes.update);
+  route.delete('/class/:id', classes.delete);
+
+  // students route
+  route.get('/student', students.getAll);
+  route.get('/student/:id', students.getByID);
+  route.post('/student', students.save);
+  route.put('/student/:id', students.update);
+  route.delete('/student/:id', students.delete);
+
+  return route;
 };
