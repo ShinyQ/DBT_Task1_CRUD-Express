@@ -1,13 +1,13 @@
 {
-  "name": "crud",
+  "name": "crud_express_sequelize",
   "version": "1.0.0",
-  "description": "",
+  "description": "Basic simple example sequelize orm with expressjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index",
+    "start": "node index"
   },
-  "keywords": [],
-  "author": "",
+  "author": "herudi",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
